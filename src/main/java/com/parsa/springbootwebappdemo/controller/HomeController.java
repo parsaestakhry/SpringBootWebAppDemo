@@ -17,9 +17,8 @@ public class HomeController {
 
 
     @RequestMapping("add")
-    public String add(HttpServletRequest request, HttpSession session){
-        int num1=  Integer.parseInt(request.getParameter("num1"));
-        int num2 = Integer.parseInt(request.getParameter("num2"));
+    public String add(int num1, int num2, HttpSession session){
+
         int result = num1 + num2;
 
         session.setAttribute("result", result);
